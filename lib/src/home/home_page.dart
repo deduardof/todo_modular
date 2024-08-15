@@ -59,13 +59,11 @@ class _HomePageState extends State<HomePage> {
                       position: RelativeRect.fromLTRB(offset.dx, offset.dy, width - offset.dx, height - offset.dy),
                       items: TodoState.values
                           .map((state) => PopupMenuItem<TodoState>(
-                                //            value: state,
                                 child: Text(state.name),
                                 onTap: () => todo.state = state,
                               ))
                           .toList(),
                     );
-                    print(todo.state.name);
                   },
                   child: CheckboxListTile(
                     title: Text(
